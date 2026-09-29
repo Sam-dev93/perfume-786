@@ -4,7 +4,7 @@
   "description": "Stock, sales and cash for Perfume Shop 786 — synced with Google Sheets",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#000000",
+  "background_color": "#5BB8C9",
   "theme_color": "#F2F2F6",
   "orientation": "portrait",
   "scope": "./",
