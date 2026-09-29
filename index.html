@@ -511,8 +511,9 @@ body.setup #setup { display: block; }
    Perfume 786 — the Google Sheet is the source of truth.
    Reads & writes go through the Apps Script web app (Api.gs).
    ===================================================================== */
-const APP_VERSION = '2026.09.29-2';
+const APP_VERSION = '2026.09.29-3';
 const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1uJjm7rDzloQIyIR6i8rQfZYgLlM4DkoYexzPjXB4vjI/edit';
+const API_URL = 'https://script.google.com/macros/s/AKfycbwli1caXueu7NjLrGcgLoadkKrR6pDoYva3kGfUBik6Bo69L7Pjp0nJDjL1ZIhlLOia-w/exec';
 const CFG_KEY = 'p786-api';
 const CACHE_KEY = 'p786-cache-v1';
 const POLL_MS = 45000;
@@ -1525,7 +1526,7 @@ async function disconnect() {
 function showSetup(canCancel) {
   document.body.classList.add('setup');
   $('setupCancel').classList.toggle('hidden', !(canCancel && CFG));
-  if (CFG) { $('setupUrl').value = CFG.url; $('setupPin').value = ''; }
+  $('setupUrl').value = CFG ? CFG.url : API_URL; $('setupPin').value = '';
   $('setupErr').classList.remove('show');
 }
 function cancelSetup() { document.body.classList.remove('setup'); }
