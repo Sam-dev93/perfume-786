@@ -283,6 +283,7 @@ body.setup .dock, body.setup .bottom-fade { display: none; }
 .sheet-title p { margin-top: -4px; font-size: 14px; color: var(--sec); }
 .sheet .shead { padding: 4px 4px 0; }
 .btn { flex: 1; height: 50px; border-radius: 999px; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.stack > .btn, .sheet-body > .btn, .setup-wrap > .btn { flex: 0 0 auto; }
 .btn.tint { background: var(--acc-bg); color: var(--acc); }
 .btn.fill { background: var(--acc); color: var(--on-acc); }
 .btn.danger { background: var(--red-bg); color: var(--red); }
@@ -512,7 +513,7 @@ body.setup #setup { display: block; }
    Perfume 786 — the Google Sheet is the source of truth.
    Reads & writes go through the Apps Script web app (Api.gs).
    ===================================================================== */
-const APP_VERSION = '2026.09.29-5';
+const APP_VERSION = '2026.09.30-1';
 const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1uJjm7rDzloQIyIR6i8rQfZYgLlM4DkoYexzPjXB4vjI/edit';
 const API_URL = 'https://script.google.com/macros/s/AKfycbwli1caXueu7NjLrGcgLoadkKrR6pDoYva3kGfUBik6Bo69L7Pjp0nJDjL1ZIhlLOia-w/exec';
 const CFG_KEY = 'p786-api';
